@@ -15,7 +15,7 @@
     cursor: pointer;
 }
 
-.todoItem:active, .todoItem:hover{
+.todoItem_active, .todoItem:hover{
     background: #DAF0E6
 }
 

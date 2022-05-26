@@ -5,6 +5,12 @@ import './components/Todo.css'
 
 export class Todo extends Component{
 
+    state = {}
+
+    getCurrentTodo = (todo) => {
+        this.setState(todo)
+    }
+
     onTodoAddHandler = (newItem) => {
         console.log(newItem);
     }
@@ -15,8 +21,11 @@ export class Todo extends Component{
                 <div className={'todo'}>
                     <TodoForm
                     onTodoAdd={this.onTodoAddHandler}
+                    getCurrentTodo={this.getCurrentTodo}
                     />
-                    <TodoDescription />
+                    <TodoDescription
+                        currentTodo={this.state}
+                    />
                 </div>
 
             </>
